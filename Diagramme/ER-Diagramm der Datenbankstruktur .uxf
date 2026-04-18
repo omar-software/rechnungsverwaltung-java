@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>24</y>
+      <w>224</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>Kunden
+--
+* kunden_id (PK)
+nachname
+vorname
+strasse
+plz
+ort</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>120</y>
+      <w>40</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>216</y>
+      <w>224</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Rechnung
+--
+* rechnung_id (PK)
+rechnungsnummer
+datum
+kunden_id(FK)
+projekt
+beschreibung
+gesamt_betrag</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>328</y>
+      <w>40</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>424</y>
+      <w>224</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Rechnungskosten
+--
+*rechnungskosten_id (PK)
+rechnungs_id (FK)
+kostenart_id (FK)
+anzahl
+gesamtpreis</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>424</x>
+      <y>632</y>
+      <w>224</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Kostenarten
+--
+*kostenart_id (PK)
+name
+einzelpreis</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>536</y>
+      <w>40</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+</diagram>
